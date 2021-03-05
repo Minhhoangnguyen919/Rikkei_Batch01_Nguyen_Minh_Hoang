@@ -83,6 +83,29 @@ public class SanPhamSach extends SanPham{
         else return 0;
     }
 
+    @Override
+    public void luuvaofile() {
+        String tenFile = "Sach.csv";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file ------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi Sach vào file -------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
+
+    }
+
     public SanPhamSach(String maSp, String tenSp, int soLuong, float donGia, String thuocDanhMuc, String nhaXuatBan, int
             namXuatBan, String tacGia, Date ngaySanXuat, int lanTaiBan) {
         super(maSp, tenSp, soLuong, donGia, thuocDanhMuc);
@@ -115,6 +138,10 @@ public class SanPhamSach extends SanPham{
         LanTaiBan =Integer.parseInt(sc.nextLine());
         SanPhamSach spsach = new SanPhamSach(MaSp,TenSp,SoLuong,DonGia,ThuocDanhMuc,NhaXuatBan,NamXuatBan,TacGia,NgaySanXuat,LanTaiBan);
         listSach.add(spsach);
+        for (SanPham sach :
+                listSach) {
+            sach.luuvaofile();
+        }
 
     }
 

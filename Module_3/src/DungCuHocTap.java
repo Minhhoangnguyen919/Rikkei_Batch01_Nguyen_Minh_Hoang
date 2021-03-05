@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -113,6 +115,30 @@ public class DungCuHocTap extends SanPham {
         else return 0;
     }
 
+    @Override
+    public void luuvaofile() {
+        String tenFile = "Dungcuhoctap.csv";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file ------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi Sach vào file -------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
+
+
+    }
+
     public void them(){
         super.them();
         Scanner sc = new Scanner(System.in);
@@ -133,5 +159,9 @@ public class DungCuHocTap extends SanPham {
         KichThuoc = Float.parseFloat(sc.nextLine());
         DungCuHocTap dungcu= new DungCuHocTap(MaSp,TenSp,SoLuong,DonGia,ThuocDanhMuc,XuatXu,ThuongHieu,NhaCungCap,HuongDanSuDung,MauSac,ChatLieu,KichThuoc);
         listDungCu.add(dungcu);
+        for (DungCuHocTap dc :
+                listDungCu) {
+            dc.luuvaofile();
+        }
     }
 }

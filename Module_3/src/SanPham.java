@@ -74,6 +74,7 @@ abstract class SanPham {
     public abstract void HienThiThongTin();
 
     public abstract double PhanTramGiamGia(String LoaiKh);
+    public abstract void luuvaofile();
 
     public void them() {
         Scanner sc = new Scanner(System.in);

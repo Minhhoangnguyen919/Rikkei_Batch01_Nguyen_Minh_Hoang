@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <meta charset="UTF-8">
+        <title>Đăng kí</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+<body>
+<h1 style="color: #016600; text-align: center">Đăng kí</h1>
+<div class="form">
+    <div class="form-group">
+        <label >Họ và tên</label>
+        <input id ="usr" type="text" class="form-control" placeholder="Họ và tên">
+    </div>
+    <div class="form-group">
+        <label>Chứng minh nhân dân</label>
+        <input id ="cmnd" type="text" class="form-control" placeholder="Số chứng minh nhân dân">
+    </div>
+    <div class="form-group">
+        <label>Ngày sinh</label>
+        <input id="birthday" class="form-control" type="date" placeholder="Ngày tháng sinh">
+    </div>
+    <div class="form-group">
+        <label>Địa chỉ email</label>
+        <input id="email"type="text" class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label>Địa chỉ</label>
+        <input id="address" type="text" class="form-control" placeholder="Địa chỉ">
+    </div>
+    <div class="form-group">
+        <label>Loại Customer</label>
+        <select class="form-control" id="loaik" >
+            <option>Diamond</option>
+            <option>Platinum</option>
+            <option>Gold</option>
+            <option>Silver</option>
+            <option>Member</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Giảm giá</label>
+        <input id="sale" type="text" class="form-control" placeholder="Giảm giá">
+    </div>
+    <div class="form-group">
+        <label>Số lượng đi</label>
+        <input id="soluong" type="text" class="form-control" placeholder="Số lượng">
+    </div>
+    <div class="form-group">
+        <label>Ngày thuê</label>
+        <input id="rentDay" class="form-control" type="text" placeholder="Số ngày thuê">
+    </div>
+    <div class="form-group">
+        <label>Loại Customer</label>
+        <select class="form-control" id="service"  >
+            <option>Villa</option>
+            <option>House</option>
+            <option>Room</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Loại Customer</label>
+        <select class="form-control" id="room" >
+            <option>Vip</option>
+            <option>Business</option>
+            <option>Normal</option>
+        </select>
+    </div>
+    <button class="btn btn-success" onclick="add()">Đồng ý</button>
+</div>
+<div>
+    <h2 style="color: #016600;text-align: center">Thông tin</h2>
+    <table class="table" style="width: 80%; font-size: 16px; margin-left: 10%;">
+
+        <thead>
+        <tr>
+            <th cope="cols">Số thứ tự</th>
+            <th cope="cols">Họ và tên</th>
+            <th cope="cols">Số CMND</th>
+            <th cope="cols">Ngày sinh</th>
+            <th scope="col">Email</th>
+            <th scope="col">Địa chỉ</th>
+            <th scope="col">Loại Customer</th>
+            <th scope="col">Giảm Giá</th>
+            <th scope="col">Số lượng đi kèm</th>
+            <th scope="col">Số ngày thuê</th>
+            <th scope="col">Loại dịch vụ</th>
+            <th scope="col">Loại phòng</th>
+            <th scope="col">Giá tiền</th>
+        </tr>
+        </thead>
+        <tbody id="dataList"></tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    var count =0;
+
+    function add() {
+        count++;
+        var usr = document.getElementById("usr").value;
+        var cmnd = document.getElementById("cmnd").value;
+        var birthday = document.getElementById("birthday").value;
+        var email = document.getElementById("email").value;
+        var adress = document.getElementById("address").value;
+        var loaik = document.getElementById("loaik").value;
+        var sale = document.getElementById("sale").value;
+        var soluong = document.getElementById("soluong").value;
+        var rentDay = document.getElementById("rentDay").value;
+        var service = document.getElementById("service").value;
+        var room = document.getElementById("room").value;
+        var datalistTag = document.getElementById("dataList"),value;
+        try {
+            if (rentDay < 0)
+                return false;
+        } catch (e) {
+            message.innerHTML = ("Dữ liệu nhập" + e)
+        }
+        try {
+            if (soluong < 0)
+                return false;
+        } catch (e) {
+            message.innerHTML = ("Dữ liệu nhập" + e)
+        }
+        try {
+            if (sale < 0)
+                return false;
+        } catch (e) {
+            message.innerHTML = ("Dữ liệu nhập" + e)
+        }
+
+        if (document.getElementById("service").value == "Villa"){
+            cost = 500 * document.getElementById("rentDay").value * (1 - (document.getElementById("sale").value)/100)
+        }
+        else if (document.getElementById("service").value == "House"){
+            cost = 300 * document.getElementById("rentDay").value * (1 - (document.getElementById("sale").value)/100)
+        }
+        else { cost = 100 * document.getElementById("rentDay").value * (1 - (document.getElementById("sale").value)/100)}
+        cost;
+
+        var regExp = /^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
+        var email = document.getElementById("email").value;
+
+        if (regExp.test(email)==false){
+            count--;
+            alert('email không hợp lệ! aa@aaa.aaa');
+            email.focus()
+        }
+        var testcmnd = /^([0-9]{8}|1[89]00[0-9]{4})$/;
+        if (testcmnd.test(cmnd)==false){
+            count--;
+            alert('Chứng minh không hợp lệ! XXXXXXXX');
+            cmnd.focus();
+        }
+
+        datalistTag.innerHTML += "<tr>" + "<td>"+count+"</td>" + "<td>"+usr+"</td>" + "<td>"+cmnd+"</td>"
+            + "<td>"+birthday+"</td>" + "<td>"+email+"</td>" + "<td>"+adress+"</td>" + "<td>"+loaik+"</td>" + "<td>"+sale+"</td>"
+            + "<td>"+soluong+"</td>" + "<td>"+rentDay+"</td>" + "<td>"+service+"</td>" + "<td>"+room+"</td>"+"<td>"+cost+"</td>"
+    }
+    var cost=0
+</script>
+</body>
+</html>

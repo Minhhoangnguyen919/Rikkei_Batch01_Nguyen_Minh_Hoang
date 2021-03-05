@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.h1{
+    color: #029500;
+}
+.form{
+    width: 40%;
+    border: 1px solid #000000;
+    padding: 0 10px 10px 10px;
+    margin:0 30% 0 30%;
+    border-radius: 10px ;
+}
+.form-group>label{
+    color: #016600;
+    font-weight: bold;
+}
+.form-group .form-check{
+    width: 150px;
+}
+.form-group .form-check-input{
+    width: 30px;
+    display: block;
+}
+.form-group .form-check-label{
+    width: 100px;
+}
+.table >th{
+    text-align: center;
+}
+.table .col{
+    width: 10%;
+    font-size: 16px;
+}

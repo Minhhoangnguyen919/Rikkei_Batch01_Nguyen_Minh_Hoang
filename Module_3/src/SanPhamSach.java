@@ -77,10 +77,15 @@ public class SanPhamSach extends SanPham{
 
     @Override
     public double PhanTramGiamGia(String LoaiKh) {
-        if(LoaiKh.equals("Thường")) return 0.02;
-        else if(LoaiKh.equals("VIP1")) return 0.05;
-        else if(LoaiKh.equals("VIP2")) return 0.1;
-        else return 0;
+        switch (LoaiKh){
+            case "Thường":
+                return 0.02;
+            case "Vip1":
+                return 0.05;
+            case "Vip2":
+                return 0.1;
+        }
+        return 0;
     }
 
     @Override
@@ -123,6 +128,10 @@ public class SanPhamSach extends SanPham{
         NhaXuatBan = sc.nextLine();
         System.out.println("Nhap Nam xuat ban");
         NamXuatBan = Integer.parseInt(sc.nextLine());
+        while (NamXuatBan<1000 && NamXuatBan>2021){
+            System.out.println("Nhap lai nam xuat ban: ");
+            NamXuatBan = Integer.parseInt(sc.nextLine());
+        }
         System.out.println("Tác giả");
         TacGia = sc.nextLine();
         System.out.println("Ngày sản xuất");
@@ -136,6 +145,10 @@ public class SanPhamSach extends SanPham{
         }
         System.out.println("Lần tái bản");
         LanTaiBan =Integer.parseInt(sc.nextLine());
+        while (LanTaiBan<0){
+            System.out.println("Nhap lai lan tai ban: ");
+            LanTaiBan = Integer.parseInt(sc.nextLine());
+        }
         SanPhamSach spsach = new SanPhamSach(MaSp,TenSp,SoLuong,DonGia,ThuocDanhMuc,NhaXuatBan,NamXuatBan,TacGia,NgaySanXuat,LanTaiBan);
         listSach.add(spsach);
         for (SanPham sach :

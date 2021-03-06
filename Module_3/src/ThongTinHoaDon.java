@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -100,6 +102,26 @@ public class ThongTinHoaDon {
         System.out.println("---------Hien thi thong tin hoa don--------");
         System.out.println(listHoaDon);
     }
+    public void Luufile() {
+        String tenFile = "Donhang.csv";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file ------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi Đơn hàng vào file -------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
+    }
     public void them(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap Mã Hóa Đơn");
@@ -110,6 +132,10 @@ public class ThongTinHoaDon {
         MaSp= sc.nextLine();
         System.out.println("Nhập vào Số lượng");
         soLuong= Integer.parseInt(sc.nextLine());
+        while (soLuong<=0){
+            System.out.println("Nhap lai so luong: ");
+            soLuong=Integer.parseInt(sc.nextLine());
+        }
         System.out.println("Nhap ngày Mua");
         String ngaymuahang = sc.nextLine();
         Date date = new Date();
@@ -123,7 +149,10 @@ public class ThongTinHoaDon {
         DonGia = Float.parseFloat(sc.nextLine());
         ThongTinHoaDon hoaDon = new ThongTinHoaDon( MaHd,Makh,MaSp,soLuong,NgayMua,DonGia,TongTien );
         listHoaDon.add(hoaDon);
-
+        for (ThongTinHoaDon dc :
+                listHoaDon) {
+            dc.Luufile();
+        }
     }
 
 

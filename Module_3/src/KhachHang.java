@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -87,9 +89,30 @@ public class KhachHang {
     public void HienthiKhachhang(){
         System.out.println(ListKh);
     }
+    public void Luufile() {
+        String tenFile = "Khachhang.csv";
+        try {
+            File file = new File(tenFile);
+            if (file.createNewFile()){
+                System.out.println("--------Create new file ------");
+            }
+            FileWriter fileWriter = new FileWriter(tenFile);
+
+            fileWriter.write(this.toString());
+
+            fileWriter.close();
+            System.out.println("--------Đã ghi khách hàng vào file -------");
+
+        } catch (Exception e){
+            System.out.println("----------------------");
+            System.out.println(e);
+            System.out.println("-----------------------");
+        }
+    }
     public void them(){
         //Mã Khách hàng, Họ Tên, Số Điện thoại, Email, Ngày sinh, Loại Khách hàng;
         Scanner sc = new Scanner(System.in);
+        KiemTra kt=new KiemTra();
         System.out.println("========NHAP KHACH HANG========");
         System.out.println("Nhap Mã khách hàng");
         maKh = sc.nextLine();
@@ -97,8 +120,16 @@ public class KhachHang {
         HoTen = sc.nextLine();
         System.out.println("Nhập vào số điện thoại");
         SDT= sc.nextLine();
+        while (!kt.isNumeric(SDT) || SDT.length()!=12){
+            System.out.println("Nhap lai so dien thoai: ");
+            SDT=sc.nextLine();
+        }
         System.out.println("Nhập vào email");
         Email= sc.nextLine();
+        while (!kt.validate(Email)){
+            System.out.println("Nhap lai email: ");
+            Email=sc.nextLine();
+        }
         System.out.println("Nhap ngày sinh");
         String ngaySinh = sc.nextLine();
         Date date = new Date();
@@ -110,9 +141,25 @@ public class KhachHang {
         }
         System.out.println("Nhập loại khách hang");
         LoaiKh = sc.nextLine();
+        while (LoaiKh.toLowerCase().equals("thường")==false&&
+                LoaiKh.toLowerCase().equals("vip1")==false&&
+                LoaiKh.toLowerCase().equals("vip2")==false){
+            if(LoaiKh.trim().equals("")||LoaiKh==null){
+                LoaiKh="Thường";
+                break;
+            }
+            else {
+                System.out.println("Nhap lai loai khach hang: ");
+                LoaiKh= sc.nextLine();
+            }
+        }
 
         KhachHang khachhang= new KhachHang(maKh,HoTen,SDT,Email,NgaySinh,LoaiKh);
         ListKh.add(khachhang);
+        for (KhachHang kh :
+                ListKh) {
+            kh.Luufile();
+        }
 
     }
 

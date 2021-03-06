@@ -109,10 +109,15 @@ public class DungCuHocTap extends SanPham {
 
     @Override
     public double PhanTramGiamGia(String LoaiKh) {
-        if(LoaiKh.equals("Thường")) return 0.01;
-        else if(LoaiKh.equals("VIP1")) return 0.03;
-        else if(LoaiKh.equals("VIP2")) return 0.07;
-        else return 0;
+        switch (LoaiKh){
+            case "Thường":
+                return 0.01;
+            case "Vip1":
+                return 0.03;
+            case "Vip2":
+                return 0.07;
+        }
+        return 0;
     }
 
     @Override

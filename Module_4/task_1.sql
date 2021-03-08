@@ -11,9 +11,9 @@ where a.SoLuong > 20 and a.DonGia < 1000000;
 #3. Hiển thị thông tin của những Khách hàng có độ tuổi >16 tuổi và < 30 tuổi có địa chỉ ở Đà Nẵng 
 #hoặc những Khách hàng có độ tuổi > 40 tuổi và có địa chỉ ở Quảng Nam
 
-select * from khachhang as a
-where ROUND(DATEDIFF(now() , a.NgaySinh)/365) BETWEEN 16 and 30 and ROUND(DATEDIFF(now() , a.NgaySinh)/365) = 40;
-  
+select * from khachhang 
+where year(curdate())-year(ngaysinh)>16 and year(curdate())-year(ngaysinh)<30 or year(curdate())-year(ngaysinh)>40
+
 
 #6 Hiển thị thông tin của những Khách hàng có tên bắt đầu là các ký tự ‘K’, ‘H’ hoặc ‘T’ và có độ dài tối thiểu 15 ký tự.
 select * from khachhang 

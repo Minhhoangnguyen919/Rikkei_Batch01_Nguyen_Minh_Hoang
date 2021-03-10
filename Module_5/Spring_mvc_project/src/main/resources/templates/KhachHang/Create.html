@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+</head>
+<body>
+<h1>Create customer</h1>
+<p>
+    <a href="/list-khachhang">Danh Sách</a>
+</p>
+
+<form th:action="@{/create-KhachHang}" th:object="${Createkhachhang}" method="post">
+    <table>
+        <tr>
+            <td>Mã Khách Hàng:</td>
+            <td><input type="text" th:field="*{maKhachHang}"/></td>
+        </tr>
+        <tr>
+            <td>Tên Khách Hàng:</td>
+            <td><input type="text" th:field="*{tenKhachHang}"/></td>
+        </tr>
+        <tr>
+            <td>Ngày Sinh:</td>
+            <td><input type="text" th:field="*{ngaySinh}"/></td>
+        </tr>
+        <tr>
+            <td>Số Điện thoại:</td>
+            <td><input type="text" th:field="*{soDienThoai}"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" th:field="*{email}"/></td>
+        </tr>
+        <tr>
+            <td>Mã Loại:</td>
+            <td><input type="text" th:field="*{maLoai}"/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create KhachHang"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

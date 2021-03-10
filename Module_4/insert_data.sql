@@ -37,6 +37,7 @@ insert into khachhang values('kh07',N'Nguyễn Văn Cường','1999/05/24','0863
 insert into khachhang values('kh08',N'Nguyễn Hữu Tính','1997/05/14','0896325125','huutinh@gmail.com',2);
 insert into khachhang values('kh09',N'Trần Hữu Quốc','1999/09/01','0935326817','huuquoc1999@gmail.com',2);
 insert into khachhang values('kh10',N'Nguyễn Quốc Cường','1998/03/26','0860539873','quoccuong@gmail.com',1);
+insert into khachhang values('kh11',N'Nguyễn Quốc Cường','1997/04/26','0802539873','quoccuong1@gmail.com',1);
 
  
 insert into sanphamsach values('sps01',N'ANIMORPHS - NGƯỜI HÓA','100','54400','Quyển','5','Hội nhà văn','2019','K.A Applegate','2019/11/27',1);
@@ -72,6 +73,9 @@ insert into sanphamdochoi values ('spdcc07',N'Lắp ráp',7,300000,'cái',3,'Tru
 insert into sanphamdochoi values ('spdcc08',N'Xe mô hình',5,420000,'chiếc',1,'Italia','ABCD','Bông','');
 insert into sanphamdochoi values ('spdcc09',N'Xe đẩy',2,290000,'chiếc',2,'Việt Nam','ABC','Lotter','');
 insert into sanphamdochoi values ('spdcc10',N'Xe đẩy',2,240000,'chiếc',2,'Việt Nam','ABC','Lotter','');
+insert into sanphamdochoi values ('spdcc11',N'Đồ chơi cát',2,290000,'chiếc',2,'Việt Nam','ABC','Lotter','');
+insert into sanphamdochoi values ('spdcc12',N'Bộ xếp hình',2,240000,'chiếc',2,'Việt Nam','ABC','Lotter','');
+
 
 insert into donhang values (1,'kh01','nv02','2020/12/09',110000);
 insert into donhang values (2,'kh02','nv08','2020/12/30',1100000);
@@ -85,16 +89,16 @@ insert into donhang values (9,'kh07','nv06','2020/12/09',102500);
 insert into donhang values (10,'kh08','nv07','2020/01/09',110000);
 
 
-insert into chitietdonhang values (1,1,'sps01',2);
-insert into chitietdonhang values (2,2,'sps10',8);
-insert into chitietdonhang values (3,3,'spdc08',1);
-insert into chitietdonhang values (4,4,'spdc10',3);
-insert into chitietdonhang values (5,5,'spdcc07',7);
-insert into chitietdonhang values (6,6,'sps07',11);
-insert into chitietdonhang values (7,7,'sps04',8);
-insert into chitietdonhang values (8,8,'spdcc09',4);
-insert into chitietdonhang values (9,9,'spdcc07',5);
-insert into chitietdonhang values (10,10,'spdc01',8);
+insert into chitietdonhang values (1,'sps01',2);
+insert into chitietdonhang values (2,'sps10',8);
+insert into chitietdonhang values (3,'spdc08',1);
+insert into chitietdonhang values (4,'spdc10',3);
+insert into chitietdonhang values (5,'spdcc07',7);
+insert into chitietdonhang values (6,'sps07',11);
+insert into chitietdonhang values (7,'sps04',8);
+insert into chitietdonhang values (8,'spdcc09',4);
+insert into chitietdonhang values (9,'spdcc07',5);
+insert into chitietdonhang values (10,'spdc01',8);
 
 
 

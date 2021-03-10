@@ -2,17 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create Khách Hàng</title>
+    <title>Sửa Khách hàng</title>
 </head>
 <body>
-<h1>Thêm Khách Hàng</h1>
+<h1>Sửa Khách Hàng</h1>
 <p>
-    <a href="/khachhang">Danh Sách</a>
+    <a href="/khachhang">Khách Hang</a>
 </p>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/save-khachhang}" th:object="${createkhachhang}" method="post">
+<form th:action="@{/edit-khachhang}" th:object="${khachhang}" method="post">
     <table>
         <tr>
             <td>Mã Khách Hàng:</td>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Thêm Khach Hang"></td>
+            <td><input type="submit" value="edit Khach Hang"></td>
         </tr>
     </table>
 </form>

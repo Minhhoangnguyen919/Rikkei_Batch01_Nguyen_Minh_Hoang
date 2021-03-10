@@ -20,15 +20,15 @@ public class KhachHangServiceImpl implements KhachHangService{
 
     @Override
     public KhachHangEntity findById(String MaKhachHang) {
-        return null;
+        return khachHangRepository.findById(MaKhachHang);
     }
 
     @Override
     public void save(KhachHangEntity khachhang) {
-
+        khachHangRepository.save(khachhang);
     }
     @Override
     public void remove(String MaKhachHang) {
-
+        khachHangRepository.remove(MaKhachHang);
     }
 }

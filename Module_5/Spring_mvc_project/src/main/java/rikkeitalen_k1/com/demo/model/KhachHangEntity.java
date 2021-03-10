@@ -1,12 +1,12 @@
 package rikkeitalen_k1.com.demo.model;
 
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.util.Date;
 
 @Entity
-@Table(name="khachhang")
+@Table(name="KhachHang")
 public class KhachHangEntity {
     @Id
     @Column(name = "MaKhachHang")
@@ -14,18 +14,18 @@ public class KhachHangEntity {
     @Column(name = "TenKhachHang")
     private String tenKhachHang;
     @Column(name = "NgaySinh")
-    private Date NgaySinh;
+    private Date ngaySinh;
     @Column(name = "SoDienThoai")
     private String soDienThoai;
-    @Column(name="Email")
+    @Column(name= "Email")
     private String email;
-    @Column(name="MaLoai")
+    @Column(name= "MaLoai")
     private String maLoai;
 
     public KhachHangEntity(String maKhachHang, String tenKhachHang, Date ngaySinh, String soDienThoai, String email, String maLoai) {
         this.maKhachHang = maKhachHang;
         this.tenKhachHang = tenKhachHang;
-        NgaySinh = ngaySinh;
+        ngaySinh = ngaySinh;
         this.soDienThoai = soDienThoai;
         this.email = email;
         this.maLoai = maLoai;
@@ -34,6 +34,7 @@ public class KhachHangEntity {
     public KhachHangEntity(){
 
     }
+
     public String getMaKhachHang() {
         return maKhachHang;
     }
@@ -51,11 +52,12 @@ public class KhachHangEntity {
     }
 
     public Date getNgaySinh() {
-        return NgaySinh;
+        return ngaySinh;
     }
 
+
     public void setNgaySinh(Date ngaySinh) {
-        NgaySinh = ngaySinh;
+        ngaySinh = ngaySinh;
     }
 
     public String getSoDienThoai() {
@@ -87,7 +89,7 @@ public class KhachHangEntity {
         return "KhachHang{" +
                 "maKhachHang='" + maKhachHang + '\'' +
                 ", tenKhachHang='" + tenKhachHang + '\'' +
-                ", NgaySinh=" + NgaySinh +
+                ", NgaySinh=" + ngaySinh +
                 ", soDienThoai='" + soDienThoai + '\'' +
                 ", email='" + email + '\'' +
                 ", maLoai='" + maLoai + '\'' +

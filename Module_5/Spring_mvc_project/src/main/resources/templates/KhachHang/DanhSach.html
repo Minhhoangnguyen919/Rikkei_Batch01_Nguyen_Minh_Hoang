@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List-KhachHang</title>
 </head>
 <body>
-<h1>Khach</h1>
+<h1>Khách Hàng</h1>
 <table border="1">
     <tr>
         <th>Mã khách hàng</th>
@@ -13,7 +13,9 @@
         <th>Ngày sinh</th>
         <th>Số điệ thoại</th>
         <th>Email</th>
-        <th>Maloai</th>
+        <th>Mã loai</th>
+        <th>Sửa</th>
+        <th>Xóa</th>
     </tr>
     <th:block th:each="khachhang : ${ListKhachhang}">
         <tr>
@@ -23,6 +25,8 @@
             <td th:text="${khachhang.soDienThoai}"></td>
             <td th:text="${khachhang.email}"></td>
             <td th:text="${khachhang.maLoai}"></td>
+            <td><a th:href="@{/edit-khachhang/__${khachhang.maKhachHang}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-khachhang/__${khachhang.maKhachHang}__ }">Delete</a></td>
         </tr>
     </th:block>
 </table>

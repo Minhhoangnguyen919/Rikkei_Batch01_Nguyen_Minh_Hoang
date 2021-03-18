@@ -18,7 +18,7 @@ where year(curdate())-year(ngaysinh)>16 and year(curdate())-year(ngaysinh)<30 or
 
 #5 Hiển thị thông tin tương ứng mỗi Khách hàng đã mua bao nhiêu sản phẩm trong Quý 4 của năm 2020.
 SELECT TenKhachHang, SUM(SoLuong) as SoLuong FROM donhang h,chitietdonhang c, khachhang k
-WHERE h.MaDonHang = c.MaDonHang and k.MaKhachHang = h.MaKhachHang and QUARTER(h.NgayMuaHang) = 3
+WHERE h.MaDonHang = c.MaDonHang and k.MaKhachHang = h.MaKhachHang and QUARTER(h.NgayMuaHang) = 4
 GROUP BY TenKhachHang;
 
 #6 Hiển thị thông tin của những Khách hàng có tên bắt đầu là các ký tự ‘K’, ‘H’ hoặc ‘T’ và có độ dài tối thiểu 15 ký tự.

@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+/*<!---information--->*/
+.create-cnt {
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding-top: 10px;
+    max-width: 770px;
+    min-width: 150px ;
+
+}
+.create-cnt>div {
+    scroll-margin-top: 90px;
+}
+.main-colm {
+    padding: 25px 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn.btn-orange-46:before {
+    content: "";
+    position: relative;
+}
+.btn.btn-orange-46 {
+    background-color: #f48a05;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    height: 46px;
+    line-height: 46px;
+    border: none;
+    border-radius: 2px;
+    padding: 0 20px;
+    width: 60%;
+}
+
+
+/*form đăng bài*/
+.create-paper{
+    width: 100%;
+    max-width: 770px;
+    min-width: 150px ;
+    margin: auto;
+    padding-top: 10px;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: block;
+
+}
+.create-paper .row {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    margin: 20px 0  20px 0;
+
+}
+.create-paper .box{
+    border: 1px solid #757575;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 46px -13px rgb(0 0 0.48);
+    -moz-box-shadow: 0 1px 46px -13px rgba(0,0,0,.48);
+    box-shadow: 0 1px 46px -13px rgb(0 0 0.48 );
+}
+
+.create-paper.upload{
+    text-align: center;
+}
+.create-paper h3{
+    text-align: center;
+    text-shadow: #757575 0.05em -0.1px;
+}
+.create-paper button{
+    color: black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.create-paper label{
+    font-style:italic;
+    font-weight: bold;
+}
+.create-paper .box textarea {
+    clear:left;
+    min-width: 250px;
+    min-height:100px;
+    max-height:100px;
+}
+
+/*XemCV*/
+.box-cv{
+    color: white;
+}
+.totalcv-search-form {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 46px -13px rgb(0 0 0.48);
+    -moz-box-shadow: 0 1px 46px -13px rgba(0,0,0,.48);
+    box-shadow: 0 1px 46px -13px rgb(0 0 0.48 );
+    position: relative;
+    border: none!important;
+}
+.recruitment-search-form {
+    padding: 12px 20px;
+    margin-top: 22px;
+    background-color: #eee;
+}
+.box-cv .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+
+.recruitment-search-form .form-control {
+    height: 36px;
+    font-size: 14px;
+    border: solid 1px #ddd;
+    border-radius: 2px;
+}
+.recruitment-search-form .form-control {
+    height: 36px;
+    font-size: 14px;
+    border: solid 1px #ddd;
+    border-radius: 2px;
+}
+optgroup {
+    font-weight: 700;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+.text-center {
+    text-align: center;
+}

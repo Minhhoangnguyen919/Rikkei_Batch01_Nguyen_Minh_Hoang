@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/styless.css">
+</head>
+<body>
+    <div class="box-cv">
+        <div>
+            <form id="search-form" class="recruitment-search-form totalcv-search-form" style="margin-top: 0px;">
+                <input type="hidden" name="step_id" value="0">
+                <div class="row"><div class="col-sm-4">
+                    <input type="text" name="keyword" id="keyword" placeholder="Tìm kiếm theo tên, email, số điện thoại" value="" class="form-control">
+                </div>
+                    <div class="col-sm-4">
+                        <input type="text" name="position_name" id="position_name" placeholder="Tìm kiếm vị trí" value="" class="form-control">
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+                        <select name="status" class="form-control">
+                            <option value="">Chọn trạng thái</option>
+                            <optgroup label="Lọc hồ sơ">
+                                <option value="1">Chưa đánh giá</option>
+                                <option value="2">Đạt yêu cầu</option>
+                                <option value="3">Không đạt yêu cầu</option>
+                            </optgroup>
+                            <optgroup label="Kiểm tra đầu vào"><option value="201">Chưa làm bài</option>
+                                <option value="202">Đạt yêu cầu</option>
+                                <option value="203">Không đạt yêu cầu</option>
+                            </optgroup> <optgroup label="Phỏng vấn">
+                            <option value="301">Chưa liên hệ</option>
+                            <option value="302">Không liên hệ được</option>
+                            <option value="303">Đồng ý phỏng vấn</option>
+                            <option value="304">Từ chối phỏng vấn</option>
+                            <option value="305">Đến phỏng vấn</option>
+                            <option value="306">Không đến phỏng vấn</option>
+                            <option value="307">Lùi lịch phỏng vấn</option>
+                            <option value="308">Đạt phỏng vấn</option>
+                            <option value="309">Không đạt phỏng vấn</option>
+                        </optgroup> <optgroup label="Nhận việc"><option value="401">Đã thông báo kết quả</option>
+                            <option value="402">Đã đến nhận việc</option>
+                            <option value="403">Từ chối nhận việc</option>
+                        </optgroup> <optgroup label="Khác">
+                            <option value="1001">Chưa xử lý</option>
+                            <option value="1002">Đạt yêu cầu</option>
+                            <option value="1003">Không đạt yêu cầu</option>
+                        </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <button class="btn btn-red form-control" style="margin: 0px;">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Danh sách hồ sơ</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>Số thứ tự</th>
+                                    <th>Tên hồ sơ</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td>27</td>
+                                    <td>2011/01/25</td>
+                                    <td>$112,000</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

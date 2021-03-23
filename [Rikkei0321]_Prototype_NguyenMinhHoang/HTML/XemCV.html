@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/styless.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light mx-auto order-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navbar-center">
+                <a class="nav-link active" href="#">Tìm hồ sơ <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="DangTuyenDung.html">Đăng tin</a>
+                <a class="nav-link" href="#">Quản lý đăng tin</a>
+                <a class="nav-link" href="XemCV.html">Hồ sơ ứng tuyển</a>
+            </div>
+        </div>
+    </nav>
+    <div class="box-cv">
+        <form id="search-form" class="recruitment-search-form totalcv-search-form" style="margin-top: 0px;">
+                <input type="hidden" name="step_id" value="0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" name="keyword" id="keyword" placeholder="Tìm kiếm theo tên, email, số điện thoại" value="" class="form-control">
+                     </div>
+                    <div class="col-md-3">
+                        <input type="text" name="position_name" id="position_name" placeholder="Tìm kiếm vị trí" value="" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <select name="status" class="form-control">
+                            <option value="">Chọn trạng thái</option>
+                            <optgroup label="Lọc hồ sơ">
+                                <option value="1">Chưa đánh giá</option>
+                                <option value="2">Đạt yêu cầu</option>
+                                <option value="3">Không đạt yêu cầu</option>
+                            </optgroup>
+                        </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-seach form-control">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+        <div class="container-fluid">
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Danh sách hồ sơ</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr class="tr-shadow">
+                                    <th>Số thứ tự</th>
+                                    <th>Tên hồ sơ</th>
+                                    <th>Ngày nhận CV</th>
+                                    <th>Trạng thái</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                           <label>1</label>
+                                        </td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                    <a href="###" class="company-logo">
+                                                        <img src="https://static.topcv.vn/company_logos/cong-ty-cp-giao-duc-educa-corporation-6d67556358b65494d801a26a77be21fb-5ea7b55a0ca31.jpg" style="height: 60px">
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <h5 class="job-title">
+                                                        <a href="#">
+                                                            <span>Trần Hoàng Anh</span>
+                                                        </a>
+                                                    </h5>
+                                                    <div class="#">
+                                                        <a>Dev</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>2018-09-27 02:12</td>
+                                        <td>
+                                            <span class="status--process">Đạt yêu cầu</span>
+                                        </td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Seen">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                    <i class="fa fa-edit"></i>                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                            <label>2</label>
+                                        </td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                    <a href="###" class="company-logo">
+                                                        <img src="https://static.topcv.vn/company_logos/cong-ty-cp-giao-duc-educa-corporation-6d67556358b65494d801a26a77be21fb-5ea7b55a0ca31.jpg" style="height: 60px">
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <h5 class="job-title">
+                                                        <a href="#">
+                                                            <span>Phạm Đức Đạt</span>
+                                                        </a>
+                                                    </h5>
+                                                    <div class="#">
+                                                        <a>Nhân viên kinh doanh</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>2018-09-27</td>
+                                        <td>
+                                            <span class="status--process">Đạt yêu cầu</span>
+                                        </td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Seen">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                    <i class="fa fa-edit"></i>                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                            <label>3</label>
+                                        </td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                    <a href="###" class="company-logo">
+                                                        <img src="https://static.topcv.vn/company_logos/cong-ty-cp-giao-duc-educa-corporation-6d67556358b65494d801a26a77be21fb-5ea7b55a0ca31.jpg" style="height: 60px">
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <h5 class="job-title">
+                                                        <a href="#">
+                                                            <span>Nguyễn Thị Kiều Trang</span>
+                                                        </a>
+                                                    </h5>
+                                                    <div class="#">
+                                                        <a>Nhân viên maketing</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>2018-09-27 02:12</td>
+                                        <td>
+                                            <span class="status--process">Chưa đánh giá</span>
+                                        </td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <div class="table-data-feature">
+                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Seen">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                        <i class="fa fa-edit"></i>                                                </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                            <label>4</label>
+                                        </td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                    <a href="###" class="company-logo">
+                                                        <img src="https://static.topcv.vn/company_logos/cong-ty-cp-giao-duc-educa-corporation-6d67556358b65494d801a26a77be21fb-5ea7b55a0ca31.jpg" style="height: 60px">
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <h5 class="job-title">
+                                                        <a href="#">
+                                                            <span>Nguyễn Thanh Hải</span>
+                                                        </a>
+                                                    </h5>
+                                                    <div class="#">
+                                                        <a>Dev</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>2018-09-27 02:12</td>
+                                        <td>
+                                            <span class="status--process">Không đạt yêu cầu</span>
+                                        </td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <div class="table-data-feature">
+                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Seen">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                        <i class="fa fa-edit"></i>                                                </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div>
+                                </div>
+                                <div class="col-sm-12 col-md-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                        <ul class="pagination"><li class="paginate_button page-item previous disabled" id="dataTable_previous"><a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                        </li>
+                                            <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                            </li>
+                                            <li class="paginate_button page-item next disabled" id="dataTable_next">
+                                                <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">Next</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/ddb26f6dfe.js"></script>
+</body>
+</html>

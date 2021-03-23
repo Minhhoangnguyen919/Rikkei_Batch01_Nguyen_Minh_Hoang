@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/styless.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light mx-auto order-0">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav navbar-center">
+            <a class="nav-link active" href="#">Tìm hồ sơ <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="DangTuyenDung.html">Đăng tin</a>
+            <a class="nav-link" href="#">Quản lý đăng tin</a>
+            <a class="nav-link" href="XemCV.html">Hồ sơ ứng tuyển</a>
+        </div>
+    </div>
+</nav>
+    <section>
+        <div class="create-cnt box-approval-rules">
+            <div class="main-colm my-3">
+                <div class="mb-3">
+                    <span>Quý khách đang sử dụng tài khoản</span>
+                    <b class="ml-1 text-uppercase text-red">Miễn phí</b>
+                    <span>.</span>
+                    <span class="ml-1">Hiệu quả tuyển dụng thấp do bị hạn chế số lượng tin đăng - vị trí đăng tin kém nổi bật, khó tiếp cận Người tìm việc và bị giới hạn nhiều quyền lợi khác.</span>
+                </div>
+                <div>
+                    <a class="btn btn-orange-46 font600 w-max-content" target="_blank" href="/bang-gia">Tìm hiểu và nâng cấp tài khoản &gt;&gt;</a>
+                </div>
+            </div>
+            <div class="text-main font600 font-italic text-approval d-pc">
+                <a target="_blank" href="/quy-dinh-dang-tin-tuyen-dung">Quy định duyệt tin trên Intership »</a>
+            </div>
+        </div>
+        <form class="create-paper">
+            <div class="row box">
+                <div class="col-md-12">
+                    <h3 class="header-box-list d-none d-md-block">
+                        <span class="title">Thông tin công việc</span>
+                        <span class="line"></span></h3>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_cd" class="form-label">Chức danh</label>
+                    <input type="text" class="form-control" id="id_cd"required placeholder="VD: Nhân viên kinh doanh" >
+                </div>
+                <div class="col-md-6">
+                    <label for="ml" class="form-label">Mức lương</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="ml">
+                        <option selected>Mức lương</option>
+                        <option value="1">7tr</option>
+                        <option value="2">10tr</option>
+                        <option value="3">15tr</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_sl" class="form-label">Số lượng cần tuyển</label>
+                    <input type="text" class="form-control" id="id_sl" placeholder="0" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_add" class="form-label">Địa điểm làm việc</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="id_add">
+                        <option selected>Địa điểm làm việc</option>
+                        <option value="1">TP. Hồ Chí Minh</option>
+                        <option value="2">TP. Đà Nẵng</option>
+                        <option value="3">Hà Nội</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_capbac" class="form-label">Cấp bậc</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="id_capbac">
+                        <option selected>Cấp bậc</option>
+                        <option value="1">Mới tốt nghiệp/ Thực tập sinh</option>
+                        <option value="2">Nhân viên</option>
+                        <option value="3">Trưởng phòng</option>
+                        <option value="2">Phó Phòng</option>
+                        <option value="3">Giám Đốc</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputZip" class="form-label">Ngành tuyển dụng</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="VD: Công nghệ thông tin"required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lhcv" class="form-label">Loại hình công việc</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="lhcv">
+                        <option selected>Loại hình công việc</option>
+                        <option value="1">Bán thời gian cố đinh</option>
+                        <option value="2">Bán thới gian tạm thời</option>
+                        <option value="3">Toàn thời gian cố đinh</option>
+                        <option value="4">Toàn thời gian tạm thời</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="mtcv" class="form-label">Mô tả công việc</label>
+                    <textarea type="text" class="form-control" id="mtcv" placeholder="Nhập vào mô tả công việc"required></textarea>
+                </div>
+                <div class="col-md-12">
+                    <label for="ql" class="form-label">Quyền lợi</label>
+                    <textarea type="text" class="form-control" id="ql" placeholder="Nhập vào quyền lợi"required></textarea>
+                </div>
+                <div></div>
+            </div>
+            <div class="row box">
+                <div class="col-md-12">
+                    <h3 class="header-box-list d-none d-md-block">
+                        <span class="title">Yêu cầu công việc</span>
+                        <span class="line"></span></h3>
+                </div>
+                <div class="col-md-6">
+                    <label for="gt" class="form-label">Giới tính</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="gt">
+                        <option selected>Giới tính</option>
+                        <option value="1">Nam</option>
+                        <option value="2">Nữ</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_sl" class="form-label">Bằng cấp</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="id_bc">
+                        <option selected>Kiểu bằng cấp</option>
+                        <option value="1">Đại học</option>
+                        <option value="2">Cao đẳng</option>
+                        <option value="3">THPT</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="time" class="form-label">Hạn nạp hồ sơ</label>
+                    <input type="date" class="form-control" id="time"required>
+                </div>
+                <div class="col-md-6">
+                    <label for="nn" class="form-label">Ngôn ngữ hồ sơ</label>
+                    <select class="form-select form-control" aria-label="Default select example" id="nn">
+                        <option selected>Cấp bậc</option>
+                        <option value="1">Tiếng Anh</option>
+                        <option value="2">Tiếng Việt</option>
+                        <option value="3">Tiếng Trung</option>
+                        <option value="4">Tiếng Nhật</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="yccv" class="form-label">Yêu cầu công việc</label>
+                    <textarea type="text" class="form-control" id="yccv" placeholder="Nhập vào yêu cầu công việc"required></textarea>
+                </div>
+                <div class="col-md-12">
+                    <label for="ychs" class="form-label">Yêu cầu hồ sơ</label>
+                    <textarea type="text" class="form-control" id="ychs"  placeholder="Nhập vào yêu cầu hồ sơ lý lịch" required></textarea>
+                </div>
+            </div>
+            <div class="row box">
+                <div class="col-md-12">
+                    <h3 class="header-box-list d-none d-md-block">
+                        <span class="title">Thông tin liên hệ</span>
+                        <span class="line"></span></h3>
+                </div>
+                <div class="col-md-6">
+                    <label for="tnll" class="form-label">Họ và tên</label>
+                    <input type="text" class="form-control" id="tnll"  placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_mumber" class="form-label">Số điện thoại</label>
+                    <input type="text" class="form-control" id="id_mumber"  placeholder="Nhập vào số điện thoại" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="id_add1" class="form-label">Địa chỉ</label>
+                    <input type="text" class="form-control" id="id_add1"  placeholder="VD: Nhập vào địa chỉ" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email"  placeholder="Nhập vào email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 upload">
+                    <button type="submit" class="btn form-control " >
+                        <i class="fa fa-upload"></i>&nbsp; Đăng Tin</button>
+                </div>
+            </div>
+        </form>
+    </section>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/ddb26f6dfe.js"></script>
+
+</body>
+</html>

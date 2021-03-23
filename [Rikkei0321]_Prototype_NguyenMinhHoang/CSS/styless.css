@@ -1,0 +1,608 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+/*container*/
+nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #d9f5ff;
+    max-width: 800px;
+
+}
+
+.bg-light {
+    background-color: #ffffff!important;
+}
+.navbar a {
+    display: block;
+    padding: 0 10px;
+    height: 45px;
+    white-space: nowrap;
+    color: grey;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar a:hover{
+    border-bottom: 3px solid #4fedf0;
+}
+
+
+/*<!---information--->*/
+.create-cnt {
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding-top: 10px;
+    max-width: 800px;
+    min-width: 150px ;
+
+}
+.create-cnt>div {
+    scroll-margin-top: 90px;
+}
+.main-colm {
+    padding: 25px 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn.btn-orange-46:before {
+    content: "";
+    position: relative;
+}
+.btn{
+    background: rgb(66, 89, 240);
+    background: linear-gradient(0deg, rgb(187, 208, 240) 0%, rgb(164, 196, 240) 100%);
+    border: none;
+    font-weight: bold;
+    color: white;
+
+}
+.btn:before {
+    height: 0%;
+    width: 2px;
+}
+.btn:hover {
+    box-shadow:  4px 4px 6px 0 rgba(174, 255, 213, 0.94),
+    -4px -4px 6px 0 rgba(252, 255, 236, 0.85),
+    inset -4px -4px 6px 0 rgba(168, 222, 240, 0.8),
+    inset 4px 4px 6px 0 rgba(78, 209, 255, 0.76);
+}
+
+/*form đăng bài*/
+.create-paper{
+    width: 100%;
+    max-width: 800px;
+    min-width: 150px ;
+    margin: auto;
+    padding-top: 10px;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: block;
+
+}
+.create-paper .row {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    margin: 20px 0  20px 0;
+
+}
+.create-paper .box{
+    /*border: 1px solid #757575;*/
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 46px -13px rgb(0 0 0.48);
+    -moz-box-shadow: 0 1px 46px -13px rgba(0,0,0,.48);
+    box-shadow: 0 1px 46px -13px rgb(0 0 0.48 );
+}
+
+.create-paper.upload{
+    text-align: center;
+}
+
+.header-box-list {
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 5px solid red;
+    line-height: 29px;
+    margin-bottom: 10px;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+.header-box-list .title {
+    display: inline-flex;
+    color: #2d82c4;
+}
+.header-box-list .line {
+    background-color: #d7d7d7;
+    bottom: 0;
+    height: 1px;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-top: auto;
+    position: absolute;
+    top: 0;
+    *top: 19px;
+    width: 100%;
+}
+.create-paper button{
+    color: black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*.create-paper label{*/
+/*    font-style:italic;*/
+/*    font-weight: bold;*/
+/*}*/
+.create-paper .box textarea {
+    clear:left;
+    min-width: 250px;
+    min-height:100px;
+    max-height:100px;
+}
+
+/*XemCV*/
+.box-cv{
+    color: white;
+}
+.totalcv-search-form {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 46px -13px rgb(0 0 0.48);
+    -moz-box-shadow: 0 1px 46px -13px rgba(0,0,0,.48);
+    box-shadow: 0 1px 46px -13px rgb(0 0 0.48 );
+    position: relative;
+    border: none!important;
+}
+.recruitment-search-form {
+    padding: 12px 20px;
+    margin-top: 22px;
+    background-color: #eee;
+    max-width: 800px;
+    margin: auto;
+}
+.box-cv .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.box-cv.row.col-sm-3{
+    border-radius: 8px;
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+
+.recruitment-search-form .form-control {
+    height: 36px;
+    font-size: 14px;
+    border: solid 1px #ddd;
+    border-radius: 8px;
+}
+.box-cv .row button{
+    background: rgb(66, 89, 240);
+    background: linear-gradient(0deg, rgb(40, 75, 240) 0%, rgb(173, 240, 229) 100%);
+    border: none;
+    font-weight: bold;
+    color: white;
+
+}
+button:before {
+    height: 0%;
+    width: 2px;
+}
+button:hover {
+    box-shadow:  4px 4px 6px 0 rgba(174, 255, 213, 0.94),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+
+
+optgroup {
+    font-weight: 700;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+.text-center {
+    text-align: center;
+}
+.text-primary {
+    color: #007bff!important;
+    font-size: 20px;
+}
+
+/*List*/
+.container-fluid {
+    width: 100%;
+    max-width: 840px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.tr-shadow {
+    -webkit-box-shadow: 0px 10px 20px 0px rgb(224 224 247);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 10px 20px 0px rgb(224 224 247);
+}
+.table thead th {
+    background: #333;
+    font-size: 16px;
+    color: #fff;
+    vertical-align: middle;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    /*padding: 22px 40px;*/
+    white-space: nowrap;
+}
+.table thead tr th{
+    text-align: center;
+}
+
+.table tbody tr td {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-left-radius: 3px;
+    text-align: center;
+}
+.table tbody td {
+    font-size: 14px;
+    color: black;
+    vertical-align: middle;
+    border: none;
+}
+.status--process {
+    color: #00ad5f;
+}
+.table-data-feature {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-left: 20%;
+    float: left;
+}
+.table-data-feature .item {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #e5e5e5;
+    margin-right: 5px;
+}
+.table-data-feature .item i {
+    font-size: 20px;
+    color: #808080;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+/*Tìm kiếm*/
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.clearfix {
+    overflow: auto;
+}
+/*Chia sẻ kinh nghiệm*/
+.container{
+    color: black;
+}
+.img-avata .avatar{
+    height: 20px; width: 20px;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+.d-flex {
+    display: flex!important;
+}
+.content-word .link h3{
+    margin: 0;
+    padding: 5px;
+    color: #2d82c4;
+}
+.content-word .link .tags{
+    border: rgba(30, 47, 35, 0.28);
+    border-radius: 10px;
+}
+.status{
+    height: 100px;
+    border-bottom: 1px solid #9d9d9d;
+    padding-top: 25px;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    display: block;
+}
+.content{
+    height: 100px;
+    border-bottom: 1px solid #9d9d9d;
+    padding-top: 10px;
+    border-radius: 10px;
+    display: block;
+}
+.p-2{
+    padding-right: 5px;
+}
+.name span{
+    color: #2d82c4;
+}
+.fa {
+    color: #adada5c2;
+}
+.fa:hover{
+    color: #0A3284;
+}
+.glyphicon:before{
+    color: #a99d9d;
+}
+.label-status{
+    padding: 10px;
+    padding-bottom: 5px;
+    color: cadetblue;
+}
+.content-new a{
+    color: #9d9d9d;
+}
+.content-new h5,h4{
+    color: black;
+}
+.content-new h5,h4:hover{
+    color: #2d82c4;
+}
+.tags span{
+    background: #A3B1B6;
+    border-radius: 5px;
+    padding: 2px;
+    color: aliceblue;
+}
+.tags span:hover{
+    background: #A3B1B6;
+    color: #2d82c4;
+}
+
+
+/* thiết lập style cho thẻ a */
+.pagination {
+    display: inline-block;
+    padding-left: 20%;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin-left:20px;
+}
+/* thiết lập style cho class active */
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+/* thêm màu nền khi người dùng hover vào class không active */
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+.noidung{
+    padding: 10px;
+}
+.answer-meta .accept-answer.accepted {
+    background: #0cbd2f;
+    color: #fff;
+}
+.noidung1{
+    margin-left: 10px;
+    padding: 5px;
+}
+.input-commnent{
+    max-width: 844px;
+    max-height: 80px;
+}
+.question{
+    width: 90%;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.btn-share{
+   background: #0cbd2f;
+    border: black 1px;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+button>.btn-share:before {
+    height: 0%;
+    width: 20px;
+}
+.fa-share{
+    color: whitesmoke;
+}
+.btn-share,.fa-share:hover {
+    color: whitesmoke;
+}
